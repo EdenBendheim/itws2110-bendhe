@@ -18,67 +18,46 @@ function getWeatherData() {
             console.error('Error:', error);
         }
     });
-}
-
-// Define a function to fetch air quality data from the OpenAQ API
-function getAirQualityData() {
-    // var city = 'New York'; // Replace with the desired city or location
-    // var country = 'US'; // Replace with the desired country code (ISO 3166-1 alpha-2)
-    // var apiUrl = `https://api.openaq.org/v2/measurements?coordinates=42.7284,-73.6918`;
-    const settings = {
-        async: true,
-        crossDomain: true,
-        url: 'https://api.openaq.org/v2/cities?city=Chicagopage=1&offset=0&sort=asc&order_by=city',
-        method: 'GET',
-        headers: {
-          accept: 'application/json'
-        }
-      };
-      $.ajax(settings).done(function (response) {
-        console.log(response);
-      });
-    $.ajax({
-        url: settings,
-        method: 'GET',
-        dataType: 'json',
-        success: function(data) {
-            // Call a function to parse and display air quality data
-            displayAirQuality(data);
-        },
-        error: function(error) {
-            console.error('Error fetching air quality data:', error);
-        }
-    });
-}
-
-// Define a function to parse and display air quality data
-function displayAirQuality(data) {
-    // Check if there is data available for the requested location
-    if (data.results.length > 0) {
-        var airQuality = data.results[0];
-        var city = airQuality.city;
-        var country = airQuality.country;
-        var location = `${city}, ${country}`;
-        var aqi = airQuality.measurements[0].value;
-        var parameter = airQuality.measurements[0].parameter;
-
-        var airQualityInfo = `
-            <h2>Air Quality in ${location}</h2>
-            <p>Parameter: ${parameter}</p>
-            <p>Air Quality Index (AQI): ${aqi}</p>
-        `;
-
-        $('#weather-info').append(airQualityInfo);
-    } else {
-        console.error('No air quality data available for the requested location.');
+}$(document).ready(function() {
+    // Define a function to fetch data about a random Game of Thrones character
+    function getRandomCharacter() {
+        $.ajax({
+            url: 'https://anapioficeandfire.com/api/characters/' + Math.floor(Math.random() * 2138), // There are 2138 characters in the API
+            method: 'GET',
+            dataType: 'json',
+            success: function(data) {
+                // Call a function to display the character information
+                displayCharacterInfo(data);
+            },
+            error: function(error) {
+                console.error('Error fetching character:', error);
+            }
+        });
     }
+
+    // Define a function to display character information
+function displayCharacterInfo(character) {
+    // Helper function to handle empty categories
+    function handleEmptyCategory(category) {
+        return category.trim() !== '' ? category : 'Not Available';
+    }
+
+    var characterInfo = `
+        <h2>${character.name}</h2>
+        <p>Gender: ${handleEmptyCategory(character.gender)}</p>
+        <p>Culture: ${handleEmptyCategory(character.culture)}</p>
+        <p>Aliases: ${character.aliases.length > 0 ? character.aliases.join(', ') : 'Not Available'}</p>
+        <p>Born: ${handleEmptyCategory(character.born)}</p>
+        <p>Died: ${handleEmptyCategory(character.died)}</p>
+    `;
+
+    $('#character-info').html(characterInfo);
 }
 
-// Call the getAirQualityData function to fetch air quality data when the document is ready
-$(document).ready(function() {
-    getAirQualityData();
-});
 
+    // Trigger the random character fetch when the document is ready
+    getRandomCharacter();
+});
 
 
 // Define a function to parse and display weather information
@@ -100,7 +79,8 @@ function getInfo(data) {
 
     var weatherInfo = `
         <h2>${city} Weather</h2>
-        <p>Temperature: ${temperature}°C</p>
+        <p id="temp">Temperature: ${temperature}°C</p>
+        <img id="image"src="https://openweathermap.org/img/wn/${weatherIcon}.png" alt="Weather Icon">
         <p>Feels Like: ${feelsLike}°C</p>
         <p>Condition: ${condition}</p>
         <p>Humidity: ${humidity}%</p>
@@ -110,7 +90,6 @@ function getInfo(data) {
         <p>Visibility: ${visibility} meters</p>
         <p>Sunrise Time: ${sunriseTime.toLocaleTimeString()}</p>
         <p>Sunset Time: ${sunsetTime.toLocaleTimeString()}</p>
-        <img src="https://openweathermap.org/img/wn/${weatherIcon}.png" alt="Weather Icon">
         <p>Weather ID: ${weatherId}</p>
     `;
 
@@ -121,5 +100,4 @@ function getInfo(data) {
 // Call the function to fetch weather data when the document is ready
 $(document).ready(function() {
     getWeatherData();
-    getAirQualityData()
 });

@@ -14,7 +14,7 @@ header {
     background-color: #007BFF;
     color: #fff;
     text-align: center;
-    padding: 20px 0;
+    padding: 0;
 }
 
 header h1 {
@@ -23,24 +23,33 @@ header h1 {
 }
 
 .container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-}
 
-/* Add more styles for your weather information here */
-/* Example:
-.weather-info {
-    background-color: #fff;
+    text-align: center;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-*/
 
 footer {
     background-color: #333;
     color: #fff;
     text-align: center;
     padding: 10px 0;
+}
+
+#temp{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+#charinfo{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+h2 {
+    margin-top:10px;
 }
