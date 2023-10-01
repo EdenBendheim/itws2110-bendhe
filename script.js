@@ -20,39 +20,65 @@ function getWeatherData() {
     });
 }
 
-// Define a function to fetch the NASA Earth image
-function getNasaEarthImage() {
-    var apiKey = 'zpDHUpCHkkb299td8sZwwnyfg9OhD94gns4uEqUF';
-    var latitude = 42.7284;
-    var longitude = -73.6918;
-    var apiUrl = 'https://api.nasa.gov/planetary/earth/imagery?lon=100.75&lat=1.5&date=2014-02-01&api_key=gRIxijllJS7WRP7nZpqgjiHt4LeaRxfENOnFxlMB';
-    //`https://api.nasa.gov/planetary/earth/imagery/?lon=${longitude}&lat=${latitude}&api_key=${apiKey}`;
-    
+// Define a function to fetch air quality data from the OpenAQ API
+function getAirQualityData() {
+    // var city = 'New York'; // Replace with the desired city or location
+    // var country = 'US'; // Replace with the desired country code (ISO 3166-1 alpha-2)
+    // var apiUrl = `https://api.openaq.org/v2/measurements?coordinates=42.7284,-73.6918`;
+    const settings = {
+        async: true,
+        crossDomain: true,
+        url: 'https://api.openaq.org/v2/cities?city=Chicagopage=1&offset=0&sort=asc&order_by=city',
+        method: 'GET',
+        headers: {
+          accept: 'application/json'
+        }
+      };
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+      });
     $.ajax({
-        url: apiUrl,
+        url: settings,
         method: 'GET',
         dataType: 'json',
         success: function(data) {
-            // Call the insertNasaImage function and pass the NASA image URL
-            insertNasaImage(data.url);
+            // Call a function to parse and display air quality data
+            displayAirQuality(data);
         },
         error: function(error) {
-            console.error('Error fetching NASA Earth image:', error);
+            console.error('Error fetching air quality data:', error);
         }
     });
 }
 
+// Define a function to parse and display air quality data
+function displayAirQuality(data) {
+    // Check if there is data available for the requested location
+    if (data.results.length > 0) {
+        var airQuality = data.results[0];
+        var city = airQuality.city;
+        var country = airQuality.country;
+        var location = `${city}, ${country}`;
+        var aqi = airQuality.measurements[0].value;
+        var parameter = airQuality.measurements[0].parameter;
 
-// Define a function to insert the NASA image into the HTML
-function insertNasaImage(imageUrl) {
-    if (imageUrl) {
-        var nasaImage = `<img src="${imageUrl}" alt="NASA Earth Image" width="300">`;
-        var b = $imageUrl;
-        $('#weather-info').append(b);
+        var airQualityInfo = `
+            <h2>Air Quality in ${location}</h2>
+            <p>Parameter: ${parameter}</p>
+            <p>Air Quality Index (AQI): ${aqi}</p>
+        `;
+
+        $('#weather-info').append(airQualityInfo);
     } else {
-        console.error('NASA image URL is not valid.');
+        console.error('No air quality data available for the requested location.');
     }
 }
+
+// Call the getAirQualityData function to fetch air quality data when the document is ready
+$(document).ready(function() {
+    getAirQualityData();
+});
+
 
 
 // Define a function to parse and display weather information
@@ -95,5 +121,5 @@ function getInfo(data) {
 // Call the function to fetch weather data when the document is ready
 $(document).ready(function() {
     getWeatherData();
-    getNasaEarthImage();
+    getAirQualityData()
 });
