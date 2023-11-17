@@ -1,0 +1,38 @@
+body {
+  height: 100vh;
+  background-color: var(--theme1);
+  font-size: 24px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto; 
+  justify-content: flex-start;
+  align-items: center;
+}
+
+section {
+  margin: 1em;
+}
+section>h1{
+  text-align: center;
+}
+section>p{
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width:100%;
+}
+input {
+  height: 1.5em;
+  font-size: .7em;
+}
+#forms {
+  display: flex;
+  flex-direction: row;
+}

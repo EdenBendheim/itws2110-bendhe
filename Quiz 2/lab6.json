@@ -1,0 +1,145 @@
+{
+  "Websys_course": {
+    "Lectures": [
+      {
+        "title": "Lecture 1",
+        "date": "8/29",
+        "description": "Syllabus and Calendar",
+        "links": [
+          "https://docs.google.com/presentation/d/108X6S-Xjn_RWOtriaLqWZhVgV6sYk4KXIpAobzW2HbI/edit?usp=sharing",
+          "https://docs.google.com/document/d/16896CTeaqYaVhefTuvbpJFhjv2q-vCn--zbxRDINer0/edit?usp=sharing",
+          "https://docs.google.com/document/d/1o5sr3_ksNLy-H8Awgbj2gUAH6Qz9P2jzkqG0P3oDHCk/edit?usp=sharing"
+        ]
+      },
+      {
+        "title": "Lecture 2",
+        "date": "9/8",
+        "description": "Choose Your Own Adventure",
+        "links": [
+          "https://docs.google.com/presentation/d/1jZV3MJSI0rRpbwSsD3cIHG81N-p9wMFpAsG9MXZK30A/edit?usp=sharing",
+          "https://docs.google.com/presentation/d/1AAqHOY4yykSkNBdf_KzP5WfjE6lkkm9MJ_8ZOXBiOd4/edit?usp=sharing"
+        ]
+      },
+      {
+        "title": "Lecture 3",
+        "date": "9/12",
+        "description": "Markup Languages",
+        "links": [
+          "https://drive.google.com/file/d/1R3rh_VvkP7LpuCp4T17P8wZEoETcXOLh/view?usp=sharing"
+        ]
+      },
+      {
+        "title": "Lecture 4",
+        "date": "9/15",
+        "description": "CSS",
+        "links": [
+          "https://docs.google.com/presentation/d/13l9w_KRL1IEO2GLHJj4P4IJ6PY7_lB2q/edit?usp=sharing&ouid=101431771635793895949&rtpof=true&sd=true",
+          "https://docs.google.com/presentation/d/1X9aAnFKEc3PYCNgS46zyn32CgX9oCD5UjPqwzPDii-M/edit?usp=sharing"
+        ]
+      },
+      {
+        "title": "Lecture 5",
+        "date": "9/22",
+        "description": "JSON, AJAX, APIs",
+        "links": [
+          "https://docs.google.com/presentation/d/1tKj67JL_ex72SwJdO7IaWOeJiVjKjwDRTQ2HGNSxbIo/edit?usp=sharing",
+          "https://docs.google.com/presentation/d/15RDN4Vpp8mSGlp-XS22-RsMf33Xdv9vHJ9JGS0arpLI/edit?usp=sharing",
+          "https://docs.google.com/presentation/d/13zQaEmzgy7yJ5tInYNZmxt04m9FOT1PxS1YZqZsW7tE/edit?usp=sharing"
+        ]
+      },
+      {
+        "title": "Lecture 6",
+        "date": "9/26",
+        "description": "Security, Part 1",
+        "links": [
+          "https://google-gruyere.appspot.com/",
+          "https://owasp.org/www-project-top-ten/",
+          "https://owasp.org/Top10/",
+          "https://www.zaproxy.org/"
+        ]
+      },
+      {
+        "title": "Lecture 7",
+        "date": "10/3",
+        "description": "Work on Lab 4",
+        "links": []
+      },
+      {
+        "title": "Lecture 8",
+        "date": "10/6",
+        "description": "Generative AI",
+        "links": [
+          "https://www.harvardonline.harvard.edu/blog/benefits-limitations-generative-ai",
+          "https://www.bloorresearch.com/2023/09/generative-ai-case-studies-and-limitations/"
+        ]
+      },
+      {
+        "title": "Lecture 9",
+        "date": "10/10",
+        "description": "Quiz Review & Optimization",
+        "links": [
+          "https://docs.google.com/presentation/d/12NxeJ0WqfjWPSjBPL-36b2ssxYyP7UJFiX5276PMwd8/edit?usp=sharing",
+          "https://docs.google.com/presentation/d/1e6rstQNTcUzl04qNhBUkLpRFqZMQ1Ife5EXRb9GN_sI/edit?usp=sharing"
+        ]
+      },
+      {
+        "title": "Lecture 10",
+        "date": "10/27",
+        "description": "UI/UX, phpmyadmin",
+        "links": [
+          "https://docs.google.com/document/d/17MrP6zhCK889NgYJV4J-Xlm3pajrrSIg/edit?usp=sharing&ouid=101431771635793895949&rtpof=true&sd=true"
+        ]
+      }
+    ],
+    "Labs": [
+      {
+        "title": "Lab 1",
+        "date": "9/1",
+        "description": "Group Website",
+        "links": [
+          "https://docs.google.com/document/d/1TVsVEJKSUBs4KEwSUe6QFsp-t_a8h4s1toh9jjKjHfw/edit?usp=sharing"
+        ]
+      },
+      {
+        "title": "Lab 2",
+        "date": "9/8",
+        "description": "Constitution Page",
+        "links": [
+          "https://docs.google.com/document/d/1A3B7FTbxIw71oOCAiBsfEHdHcXeef1gjrXsG-VI6e-U/edit?usp=sharing"
+        ]
+      },
+      {
+        "title": "Lab 3",
+        "date": "9/22",
+        "description": "APIs",
+        "links": [
+          "https://docs.google.com/document/d/1-D4VYKxBo2OnHR4Pyg9kPkoQajd3vsBgHUzRvdlo6Xw/edit?usp=sharing"
+        ]
+      },
+      {
+        "title": "Lab 4",
+        "date": "10/4",
+        "description": "ChatGPT",
+        "links": [
+          "https://docs.google.com/document/d/1SoU_8JJEjfdOLIclXF4TeXEFFYbXKTH9IW"
+        ]
+      },
+      {
+        "title": "Lab 5",
+        "date": "10/24",
+        "description": "Frontend Optimization",
+        "links": [
+          "https://docs.google.com/document/d/1u3gqViUz15LTJ-6F0aucM_EP9gzus1L09BgqOMy8nvA/edit?usp=sharing"
+        ]
+      },
+      {
+        "title": "Lab 6",
+        "date": "10/31",
+        "description": "Remake LMS",
+        "links": [
+          "https://docs.google.com/document/d/1oC6BOAmPbR0p6j_DWXWK_FInNgT8JaiUAwMWEnQf4Vw/edit?usp=sharing"
+        ]
+      }
+    ]
+  }
+}
