@@ -52,7 +52,7 @@
           <section>
             
             <?php
-              $user = 'phpmyadmin';$pass = 'p@s5w0rd';
+              $user = 'root';$pass = 'Elinor_1602%';
               try {
                 $db = new PDO('mysql:host=localhost;dbname=lab6',$user,$pass);
                 $query = 'SELECT jsondata FROM archive WHERE crn = 61971 AND year = "F23";';

@@ -1,0 +1,96 @@
+{
+  "Websys_course": {
+    "Lectures": [
+      {
+        "title": "Lecture 1",
+        "date": "8/29",
+        "description": "Intro",
+        "links": [
+          "https://docs.google.com/presentation/d/1XPqoocF5CX0g2PPVjINbblczLPBoVMQJCTbnVTOrbR4/edit?usp=share_link"
+        ]
+      },
+      {
+        "title": "Lecture 2",
+        "date": "9/8",
+        "description": "Reverse Engineering",
+        "links": [
+          "https://docs.google.com/presentation/d/1njsyW0uWA4TKp1B-8vtEOFuNxsBuhxmY4EEt_x5pi7o/edit?usp=share_link"
+        ]
+      },
+      {
+        "title": "Lecture 3",
+        "date": "9/12",
+        "description": "Memory Corruption",
+        "links": [
+          "https://docs.google.com/presentation/d/1avKXYm4CoxWyK93gxyJVcawbox8JUyIGs0wNNwHuhYg/edit?usp=share_link"
+        ]
+      },
+      {
+        "title": "Lecture 4",
+        "date": "9/15",
+        "description": "Shellcoding",
+        "links": [
+          "https://docs.google.com/presentation/d/1CbZQjUoGFJeID5Tc5j2Ez0IkhFf3Lanhw3WTiiNdGWI/edit?usp=share_link"
+        ]
+      },
+      {
+        "title": "Lecture 5",
+        "date": "9/22",
+        "description": "Stack Cookies",
+        "links": [
+          "https://docs.google.com/presentation/d/1vaRbpP0jNr245BMAqjR_0IkAiSZVAM9LteR2Tu4mNLk/edit?usp=share_link"
+        ]
+      },
+      {
+        "title": "Lecture 6",
+        "date": "9/26",
+        "description": "DEP and ROP",
+        "links": [
+          "https://docs.google.com/presentation/d/1mFhnVrPVt8TiFcEFqCIXUGePWQis5k8ossX-A0uuz6E/edit?usp=share_link"
+        ]
+      },
+      {
+        "title": "Lecture 7",
+        "date": "10/3",
+        "description": "ASLR",
+        "links": [
+          "https://docs.google.com/presentation/d/1GkPEr_IYfMW4ISOLeVF0IGGyM5G8NQKqlwaCLKSAPGU/edit?usp=share_link"
+        ]
+      },
+      {
+        "title": "Lecture 8",
+        "date": "10/6",
+        "description": "Advanced defenses",
+        "links": [
+          "https://docs.google.com/presentation/d/1NNuxVy220xdbuaa7e7njF-GC4sRB5Z8QM6ZMKyzXZcg/edit?usp=share_link"
+        ]
+      },
+      {
+        "title": "Lecture 9",
+        "date": "10/10",
+        "description": "Heap Exploitation",
+        "links": [
+          "https://docs.google.com/presentation/d/1m_Oc1GuOp20cttQ3l2r-jNTgU9xh9rzjZJLOS19ziHc/edit?usp=share_link"
+        ]
+      },
+      {
+        "title": "Lecture 10",
+        "date": "10/27",
+        "description": "Misc. types of bugs",
+        "links": [
+          "https://docs.google.com/presentation/d/1EXdzSb38NDFuq1YP3EPs2IThOu1LaPkAl_0sbEyB3S8/edit?usp=share_link"
+        ]
+      },
+      {
+        "title": "Lecture 11",
+        "date": "11/1",
+        "description": "Race Conditions",
+        "links": [
+          "https://docs.google.com/presentation/d/1WBlbRUvJLU7MTQU9udw0IBzq20c2Dh1A-9HLkwWREzI/edit?usp=share_link"
+        ]
+      }
+    ],
+    
+    "Labs": []
+  }
+}

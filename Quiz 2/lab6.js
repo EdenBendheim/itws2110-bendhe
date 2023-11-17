@@ -1,7 +1,7 @@
+var jsonFile;
 $(document).ready(function() {
-
-    loadData();
-
+    selector();
+    
 });
 
 //hide all sections
@@ -14,11 +14,33 @@ function hideAllElements(){
     });
 }
 
+function switchdoc(){
+    if (jsonFile == "lab6.json"){
+        jsonFile = "MBE.json";
+    }
+    else{
+        jsonFile = "lab6.json";
+    }
+    loadData();
+}
+
+function setdoc(doc){
+    jsonFile = doc;
+    loadData();
+}
+
+
+function selector(){
+    $("#navbar").empty();
+    $("#navbar").append(`<button onclick="setdoc('MBE.json')">MBE</button><br><br>`);
+    $("#navbar").append(`<button onclick="setdoc('lab6.json')">WebSys</button>`);
+}
+
 //read from json file and load in content
 function loadData(){
     $("#navbar").empty();
     $("#content").empty();
-    $.getJSON('lab6.json', function(info) {
+    $.getJSON(jsonFile, function(info) {
         // load lectures
         $("#navbar").append(`<h3><u>Lectures</u></h3>`);
         $.each(info.Websys_course.Lectures, function() {
@@ -69,7 +91,8 @@ function loadData(){
             }       
         });
 
-        $("#navbar").append(`<button onclick="loadData();">Refresh</button>`)
+        $("#navbar").append(`<button onclick="loadData();">Refresh</button><br><br>`)
+        $("#navbar").append(`<button onclick="switchdoc()" id="switch">Switch</button>`)
 
     });
 }
